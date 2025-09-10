@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hindhu Srimathi S K | Data Analyst Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            background-color: var(--secondary-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: white;
+        }
+        
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: white;
+        }
+        
+        #hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .hero-summary {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .education-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .education-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .education-degree {
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+        
+        .education-institution {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .education-details {
+            margin-top: 10px;
+            color: #666;
+        }
+        
+        .project-card {
+            margin-bottom: 30px;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card .card-body {
+            padding: 25px;
+        }
+        
+        .project-title {
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .project-tools {
+            margin-bottom: 15px;
+        }
+        
+        .project-tools span {
+            display: inline-block;
+            background-color: var(--light-color);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+        
+        .project-highlights ul {
+            padding-left: 20px;
+        }
+        
+        .project-highlights li {
+            margin-bottom: 8px;
+        }
+        
+        .skills-section {
+            background-color: var(--light-color);
+        }
+        
+        .skill-category {
+            margin-bottom: 30px;
+        }
+        
+        .skill-category h4 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .skill-item {
+            margin-bottom: 15px;
+        }
+        
+        .skill-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .certification-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .certification-title {
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+        
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-right: 15px;
+        }
+        
+        .contact-link {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-link:hover {
+            color: var(--primary-color);
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Hindhu Srimathi S K</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certifications">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container">
+            <h1 class="hero-title">Hindhu Srimathi S K</h1>
+            <p class="hero-subtitle">Aspiring Data Analyst | Machine Learning Enthusiast | Tech Problem Solver</p>
+            <div class="hero-summary">
+                <p>Postgraduate student in Decision and Computing Sciences with strong interests in data analysis, machine learning, and database systems. Passionate about solving real-world problems using data-driven solutions and intelligent systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <h3 class="education-degree">M.Sc. Decision and Computing Sciences</h3>
+                <p class="education-institution">Coimbatore Institute Of Technology</p>
+                <div class="education-details">
+                    <p><strong>CGPA:</strong> 8.21</p>
+                    <p><strong>Year:</strong> 2023 – Present</p>
+                    <p><strong>Location:</strong> Coimbatore, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-md-6">
+                    <div class="project-card card">
+                        <div class="card-body">
+                            <h3 class="project-title">Song Popularity Prediction</h3>
+                            <div class="project-tools">
+                                <span>Python</span>
+                                <span>Pandas</span>
+                                <span>NumPy</span>
+                                <span>Scikit-learn</span>
+                                <span>Prophet</span>
+                                <span>ARIMA</span>
+                            </div>
+                            <div class="project-highlights">
+                                <ul>
+                                    <li>Predicts song success using audio features and metadata</li>
+                                    <li>Used regression, classification, time-series forecasting</li>
+                                    <li>Achieved 84% classification accuracy with Random Forest</li>
+                                    <li>Used K-Means and cosine similarity for song recommendations</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="col-md-6">
+                    <div class="project-card card">
+                        <div class="card-body">
+                            <h3 class="project-title">Intelligent Wildlife Path Rescue</h3>
+                            <div class="project-tools">
+                                <span>Python</span>
+                                <span>NetworkX</span>
+                                <span>Matplotlib</span>
+                                <span>AVL Tree</span>
+                                <span>Priority Queue</span>
+                            </div>
+                            <div class="project-highlights">
+                                <ul>
+                                    <li>Real-time pathfinding for animal rescue missions</li>
+                                    <li>Integrated terrain, weather, and rescue mode variations</li>
+                                    <li>Improved rescue time by ~40% using optimized algorithms</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="skill-category">
+                        <h4>Languages</h4>
+                        <div class="skill-item">
+                            <div class="skill-name">Python</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Java</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">SQL</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">JavaScript</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">HTML</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="skill-category">
+                        <h4>Databases</h4>
+                        <div class="skill-item">
+                            <div class="skill-name">MySQL</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Oracle</div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Tools</h4>
+                        <div class="skill-item">
+                            <div class="skill-name">VS Code</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Jupyter Notebook</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">MS Excel</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="skill-category">
+                        <h4>Soft Skills</h4>
+                        <div class="skill-item">
+                            <div class="skill-name">Team collaboration</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Scheduling</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Coordination</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certification-item">
+                <h3 class="certification-title">Hackerrank</h3>
+                <ul>
+                    <li>SQL (Basic)</li>
+                    <li>Python (Intermediate)</li>
+                </ul>
+            </div>
+            <div class="certification-item">
+                <h3 class="certification-title">SIH Participation</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <a href="mailto:indhusrinikil@gmail.com" class="contact-link">indhusrinikil@gmail.com</a>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <a href="tel:+919677693995" class="contact-link">+91 96776 93995</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <i class="fab fa-github contact-icon"></i>
+                        <a href="https://github.com/HindhuSrimathi10" target="_blank" class="contact-link">github.com/HindhuSrimathi10</a>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fab fa-linkedin contact-icon"></i>
+                        <a href="https://linkedin.com/in/hindhusrimathi" target="_blank" class="contact-link">linkedin.com/in/hindhusrimathi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4">
+        <div class="container">
+            <div class="social-icons mb-3">
+                <a href="https://github.com/HindhuSrimathi10" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/hindhusrimathi" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:indhusrinikil@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2023 Hindhu Srimathi S K. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Smooth scroll JS -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
